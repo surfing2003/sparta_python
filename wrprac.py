@@ -19,14 +19,14 @@ from PIL import Image
 import numpy as np
 
 text = ''
-with open("kakaotalk.txt", "r", encoding="utf-8") as f:
+with open("텍스트파", "r", encoding="utf-8") as f:
     lines = f.readlines()
     for line in lines[5:]:
         if "] [" in line:
             text += line.split('] ')[2].replace('저', '').replace('저도', '').replace('저두', '').replace('ㅋ', '').replace('ㅠ', '').replace('이모티콘\n','').replace('사진\n','').replace('삭제된 메세지입니다.\n','')
 # print(text)
 
-# import matplotlib.font_manager as fm
+# import matplotlib.font_manager일 as fm
 
 # # 이용 가능한 폰트 중 '고딕'만 선별
 # for font in fm.fontManager.ttflist:
